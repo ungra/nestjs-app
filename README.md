@@ -3,10 +3,10 @@
 application usion nest.js
 
 controller
-: api 정의
+: http 요청을 처리하고 필요한 데이터를 service에 전달
 
 service
-: logic
+: 비즈니스 로직을 담당하고 Controller에 필요한 결과를 반환.
 
 NotFoundException
 : not found 예외 처리 제공.
@@ -31,3 +31,11 @@ Partialtype()
 : @nestjs/mapped-types
 : ref하는 DTO class를 partial로 사용할 수 있게 해줌.
 : @IsOptional() 등 다양한 기능 제공
+
+Module(indirect using Controller, Provider) vs direct using Controller, Provider
+: Module화를 모듈간의 결합도가 낮아지고 재사용이 가능
+: 직접 사용하면 간단하나 어플리케이션이 클수록 추후 관리가 어려워짐.
+
+dependency injection
+: 모듈간의 결합도를 낮추는 개념.
+: 객체의 인스턴스를 직접 생성하지 않고, nestjs가 자동으로 필요한 인스턴스를 제공하는 방식.
