@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  HttpCode,
   Param,
   Patch,
   Post,
@@ -26,6 +27,7 @@ export class MoviesController {
   }
 
   @Post()
+  @HttpCode(201)
   create(@Body() movieData: CreateMovieDto) {
     return this.movieService.create(movieData);
   }
