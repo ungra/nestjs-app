@@ -26,3 +26,8 @@ ValidationPipe()
 whitelist : DTO 클래스에 정의된 속성만 허용. DTO에 정의되지 않은 속성은 요청 데이터에서 자동으로 제거.
 forbidNonWhitelisted : DTO에 정의되지 않은 속성이 있을 경우, 요청을 거부하고 예외 발생.
 transform : 클라이언트가 보낸 데이터를 DTO에 정의된 type으로 자동 변환.
+
+Partialtype()
+: @nestjs/mapped-types
+: ref하는 DTO class를 partial로 사용할 수 있게 해줌.
+: @IsOptional() 등 다양한 기능 제공
