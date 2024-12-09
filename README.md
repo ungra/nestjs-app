@@ -1,6 +1,9 @@
 # nestjs-app
 
-application usion nest.js
+application using nest.js
+
+nestjs
+: node.js framework (express or fastify 위에서 동작)
 
 controller
 : http 요청을 처리하고 필요한 데이터를 service에 전달
